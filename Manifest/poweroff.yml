@@ -1,0 +1,26 @@
+---
+- name: Auto on and off
+  hosts: all
+  connection: local
+  tasks:
+    - name: Power Off
+      rm_virtualmachine:
+        subscription_id: 2c5ca720-b504-43bd-9d0f-8d577a2230de
+        tenant: 77fa8e53-4a9f-45d6-8b94-4a6e4d12f418
+        resource_group: RG-FORTES
+        name: avd-fortes-0 
+        started: no
+    - name: Deallocate
+      rm_virtualmachine:
+        resource_group: RG-FORTES
+        subscription_id: 2c5ca720-b504-43bd-9d0f-8d577a2230de
+        tenant: 77fa8e53-4a9f-45d6-8b94-4a6e4d12f418
+        name: avd-fortes-0
+        allocated: no
+    - name: Power On
+      rm_virtualmachine:
+        resource_group: RG-FORTES
+        subscription_id: 2c5ca720-b504-43bd-9d0f-8d577a2230de
+        tenant: 77fa8e53-4a9f-45d6-8b94-4a6e4d12f418
+        name: avd-fortes-0
+        started: yes

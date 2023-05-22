@@ -1,0 +1,9 @@
+---
+- name: Poweron Azure VM
+  hosts: Fortes-inventory  
+  gather_facts: no
+  vars:
+    ansible_python_interpreter: "auto"
+  tasks:
+  - name: Power on VM
+    win_command: az vm start --name avd-fortes- --resource-group rg-fortes --subscription 2c5ca720-b504-43bd-9d0f-8d577a2230de --no-wait

@@ -1,0 +1,11 @@
+- name: Win shutdown
+  hosts: all
+  connection: local
+  become: false
+  gather_facts: false
+  tasks:
+    - name: shutdown the vm
+      ansible.windows.win_reboot:
+        resource_group: rg-fortes
+        name: avd-fortes-0.fortes.local
+        started: no

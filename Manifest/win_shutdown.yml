@@ -1,0 +1,10 @@
+- name: Shutdown Windows machine
+  hosts: localhost
+  gather_facts: false
+  tasks:
+  - name: Shutdown the machine
+    win_shutdown:
+      shutdown_type: shutdown
+      delay: 0
+    become: true
+    become_method: runas
