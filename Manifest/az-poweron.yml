@@ -7,3 +7,5 @@
   tasks:
   - name: Power on VM
     shell: "az vm start --name avd-fortes-0 --resource-group rg-fortes --subscription 2c5ca720-b504-43bd-9d0f-8d577a2230de --no-wait"
+    environment:
+        AZURE_CLI_DISABLE_CONNECTION_VERIFICATION: "1"
