@@ -6,7 +6,7 @@
     - name: Install Azure Collection
       command: ansible-galaxy collection install azure.azcollection
     - name: Azure CLI Login
-      azure.azcollection.azure_rm_azure_cli:
+      azure_cli:
         client_id: "8e09ef07-fdd5-4412-b624-b65a51423f55"
         client_secret: "fZy8Q~SW22r8EnN39NQMpdsUkO8sBHsQcOoK7ca4"
         subscription_id: "2c5ca720-b504-43bd-9d0f-8d577a2230de"
