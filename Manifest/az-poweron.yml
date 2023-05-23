@@ -1,11 +1,12 @@
 ---
-- name: Poweron Azure VM
-  hosts: all
-  gather_facts: no
-  vars:
-    ansible_python_interpreter: "auto"
+- name: Auto on and off
+  hosts: localhost
+  connection: local
   tasks:
-  - name: Power on VM
-    shell: "az vm start --name avd-fortes-0 --resource-group rg-fortes --subscription 2c5ca720-b504-43bd-9d0f-8d577a2230de --no-wait"
-    environment:
-        AZURE_CLI_DISABLE_CONNECTION_VERIFICATION: "1"
+    - name: Power On
+      azure_rm_virtualmachine:
+        resource_group: RG-FORTES
+        subscription_id: 2c5ca720-b504-43bd-9d0f-8d577a2230de
+        tenant: 77fa8e53-4a9f-45d6-8b94-4a6e4d12f418
+        name: avd-fortes-0
+        started: yes
