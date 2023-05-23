@@ -1,6 +1,6 @@
 ---
 - name: Auto on and off
-  hosts: Linux
+  hosts: localhost
   connection: local
   tasks:
     - name: Power Off
