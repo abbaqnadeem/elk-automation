@@ -17,11 +17,4 @@
         tenant: 188182bc-cc1b-4263-bc31-f98df8b072cb
         name: vm-okd-centos
         allocated: no
-    - name: Power On
-      azure_rm_virtualmachine:
-        resource_group: RG-IT22
-        subscription_id: 3bb49921-5043-439e-8dd6-c4cf266198a1
-        tenant: 188182bc-cc1b-4263-bc31-f98df8b072cb
-        name: vm-okd-centos
-        started: yes
 ...
