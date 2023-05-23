@@ -1,0 +1,89 @@
+---
+- name: Auto on and off
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Power Off
+      azure_rm_virtualmachine:
+        subscription_id: 2c5ca720-b504-43bd-9d0f-8d577a2230de
+        tenant: 77fa8e53-4a9f-45d6-8b94-4a6e4d12f418
+        resource_group: RG-FORTES
+        name: avd-fortes-0 
+        started: no
+    - name: Deallocate
+      azure_rm_virtualmachine:
+        resource_group: RG-FORTES
+        subscription_id: 2c5ca720-b504-43bd-9d0f-8d577a2230de
+        tenant: 77fa8e53-4a9f-45d6-8b94-4a6e4d12f418
+        name: avd-fortes-0
+        allocated: no
+    - name: Power Off
+      azure_rm_virtualmachine:
+        subscription_id: 2c5ca720-b504-43bd-9d0f-8d577a2230de
+        tenant: 77fa8e53-4a9f-45d6-8b94-4a6e4d12f418
+        resource_group: RG-FORTES
+        name: avd-fortes-2
+        started: no
+    - name: Deallocate
+      azure_rm_virtualmachine:
+        resource_group: RG-FORTES
+        subscription_id: 2c5ca720-b504-43bd-9d0f-8d577a2230de
+        tenant: 77fa8e53-4a9f-45d6-8b94-4a6e4d12f418
+        name: avd-fortes-2
+        allocated: no
+    - name: Power Off
+      azure_rm_virtualmachine:
+        subscription_id: 2c5ca720-b504-43bd-9d0f-8d577a2230de
+        tenant: 77fa8e53-4a9f-45d6-8b94-4a6e4d12f418
+        resource_group: RG-FORTES
+        name: avd-fortes-3 
+        started: no
+    - name: Deallocate
+      azure_rm_virtualmachine:
+        resource_group: RG-FORTES
+        subscription_id: 2c5ca720-b504-43bd-9d0f-8d577a2230de
+        tenant: 77fa8e53-4a9f-45d6-8b94-4a6e4d12f418
+        name: avd-fortes-3
+        allocated: no
+    - name: Power Off
+      azure_rm_virtualmachine:
+        subscription_id: 2c5ca720-b504-43bd-9d0f-8d577a2230de
+        tenant: 77fa8e53-4a9f-45d6-8b94-4a6e4d12f418
+        resource_group: RG-FORTES
+        name: avd-fortes-4 
+        started: no
+    - name: Deallocate
+      azure_rm_virtualmachine:
+        resource_group: RG-FORTES
+        subscription_id: 2c5ca720-b504-43bd-9d0f-8d577a2230de
+        tenant: 77fa8e53-4a9f-45d6-8b94-4a6e4d12f418
+        name: avd-fortes-4
+        allocated: no
+    - name: Power Off
+      azure_rm_virtualmachine:
+        subscription_id: 2c5ca720-b504-43bd-9d0f-8d577a2230de
+        tenant: 77fa8e53-4a9f-45d6-8b94-4a6e4d12f418
+        resource_group: RG-FORTES
+        name: avd-fortes-5 
+        started: no
+    - name: Deallocate
+      azure_rm_virtualmachine:
+        resource_group: RG-FORTES
+        subscription_id: 2c5ca720-b504-43bd-9d0f-8d577a2230de
+        tenant: 77fa8e53-4a9f-45d6-8b94-4a6e4d12f418
+        name: avd-fortes-5
+        allocated: no
+    - name: Power Off
+      azure_rm_virtualmachine:
+        subscription_id: 2c5ca720-b504-43bd-9d0f-8d577a2230de
+        tenant: 77fa8e53-4a9f-45d6-8b94-4a6e4d12f418
+        resource_group: RG-FORTES
+        name: vm-dc 
+        started: no
+    - name: Deallocate
+      azure_rm_virtualmachine:
+        resource_group: RG-FORTES
+        subscription_id: 2c5ca720-b504-43bd-9d0f-8d577a2230de
+        tenant: 77fa8e53-4a9f-45d6-8b94-4a6e4d12f418
+        name: vm-dc
+        allocated: no
